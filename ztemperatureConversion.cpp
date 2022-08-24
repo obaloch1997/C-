@@ -6,20 +6,22 @@ float FahrenheitToCelsius(float);
 
 int main()
 {
-    float fahrenheit, celsius, choice;
+    float fahrenheit, celsius;
+    char choice;
     cout<<"Would you like to convert to fahrenheit (F) or celsius (C)?: ";
     cin>>choice;
     if(choice =='f'){
       cout<<"Enter the Temperature in Celsius: ";
       cin>>celsius;
       fahrenheit = CelsiusToFahrehneit(celsius);
-      cout<<endl<<celsius<<"\370C = "<<fahrenheit<<"\370F";
+      cout<<celsius<<"\370C = "<<fahrenheit<<"\370F";
       cout<<endl;
     }else {
       cout<<"Enter the Temperature in Fahrenheit: ";
       cin>>fahrenheit;
       celsius = FahrenheitToCelsius(fahrenheit);
-      cout<<endl<<fahrenheit<<"\370F = "<<celsius<<"\370C";
+      cout<<fahrenheit<<"\370F = "<<celsius<<"\370C";
+      cout<<endl;
     }
     return 0;
 }
@@ -30,7 +32,8 @@ float FahrenheitToCelsius(float f)
     return c;
 }
 
-float CelsiusToFahrehneit(float c)
+float CelsiusToFahrehneit(float celsius)
 {
+    //float c;
     return ((celsius*1.8)+32);
 }
